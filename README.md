@@ -46,7 +46,7 @@ module.exports = {
   ],
 }
 ```
-<img width="1100" alt="nala spec" src="https://user-images.githubusercontent.com/22153717/245921315-f404404f-0b10-4735-a434-e329767f76aa.png">
+<img width="1100" alt="nala spec" src="https://user-images.githubusercontent.com/22153717/245936941-89a02d45-d397-47ea-980a-1301e53c8663.png">
 ----
 
 - #### Step-2 : Create [`selector.page.js`](https://github.com/adobecom/nala-template/tree/main/selectors) under Selector folder and add selectors
@@ -197,6 +197,10 @@ npx playwright test -g=@quote --project=milo-live-chrome --headed
       },
     },
     ```
+
+<img width="1100" alt="nala pom" src="https://user-images.githubusercontent.com/22153717/245936898-76f35f55-ef28-4cfa-badf-165929ceb5af.png">
+---
+
 ##### Now, you are all set to run Nala tests on your local host
   - Example-1 : I want to run all tests on my local environments or projects (i.e [local-chrome]('http://localhost:3000')) on chrome browser in headless mode
 ```bash
