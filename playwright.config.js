@@ -92,13 +92,6 @@ const config = {
         baseURL: envs['@milo_prod'],
       },
     },
-    {
-      name: 'local-chrome',
-      use: {
-        ...devices['Desktop Chrome'],
-        baseURL: envs['@local3000'],
-      },
-    },
   ],
 };
 export default config;
