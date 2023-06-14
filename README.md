@@ -1,6 +1,6 @@
 # Nala
 
-<img width="320" alt="nala" src="https://user-images.githubusercontent.com/1972095/196048696-62bd0f4a-adf9-455f-bf12-29e6cc7a6290.png">
+<img width="600" alt="nala" src="https://user-images.githubusercontent.com/1972095/196048696-62bd0f4a-adf9-455f-bf12-29e6cc7a6290.png">
 
 Automated E2E and integration testing of Milo-based projects.
 
@@ -26,8 +26,8 @@ npx playwright test -g@quote
 ```
 ### 3. Start Nala automation test script creation
 Nala test automation script creation involves following 3 simple steps.
-- Step-1 : Create [`feature.spec.js`](https://github.com/adobecom/nala-template/tree/main/features) under Features folder and add test cases and data
-- Please refer sample template for creating test cases
+- #### Step-1 : Create [`feature.spec.js`](https://github.com/adobecom/nala-template/tree/main/features) under Features folder and add test cases and data
+  - Please refer sample template for creating test cases
 ```bash
 module.exports = {
   FeatureName: 'Quote Block',
@@ -45,11 +45,12 @@ module.exports = {
     },
   ],
 }
-image.png
-
 ```
-- Step-2 : Create [`selector.page.js`](https://github.com/adobecom/nala-template/tree/main/selectors) under Selector folder and add selectors
-- Please refer sample template for creating selector page object
+<img width="1100" alt="nala spec" src="https://user-images.githubusercontent.com/22153717/245921315-f404404f-0b10-4735-a434-e329767f76aa.png">
+----
+
+- #### Step-2 : Create [`selector.page.js`](https://github.com/adobecom/nala-template/tree/main/selectors) under Selector folder and add selectors
+  - Please refer sample template for creating selector page object
 ```bash
 export default class Quote {
   constructor(page) {
@@ -63,10 +64,12 @@ export default class Quote {
     this.sectionDark = this.page.locator('.section.dark');
   }
 }
-
 ```
-- Step-3 : Create [`<block_name>.test.js`](https://github.com/adobecom/nala-template/blob/main/tests/quote.block.test.js) under Tests folder, and add tests
-- Please refer [sample template]() for creating tests
+<img width="1100" alt="nala pom" src="https://user-images.githubusercontent.com/22153717/245926484-e587de5b-6d66-4d0e-860d-c7a8a9d6fc26.png">
+---
+
+- #### Step-3 : Create [`<block_name>.test.js`](https://github.com/adobecom/nala-template/blob/main/tests/quote.block.test.js) under Tests folder, and add tests
+  - Please refer [sample template]() for creating tests
 ```bash
 // Quote block tests
 test.describe('Milo Quote block test suite', () => {
@@ -106,6 +109,9 @@ test.describe('Milo Quote block test suite', () => {
 });
 
 ```
+<img width="1100" alt="nala pom" src="https://user-images.githubusercontent.com/22153717/245931730-f976d196-4074-4718-be51-c568d2365b45.png">
+---
+
 ### 4. Running Nala tests
 - Nala offers a range of flexible options to suit your testing needs. Please refer to the following choices for running your tests:
 - By default Nala is configured to runs all tests in parallel in headless mode on following browsers 
