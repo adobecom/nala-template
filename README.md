@@ -197,7 +197,10 @@ npx playwright test -g=@quote --project=milo-live-chrome --headed
       },
     },
     ```
-
+#### Note : 
+  - a. Please don't commit `playwright.config.js` with `local-project` setting, as on GitHub their won't be any applications running on localhost.
+  - b. If required create an another `local.config.js` for validating tests on `localhost` 
+  
 <img width="1100" alt="nala pom" src="https://user-images.githubusercontent.com/22153717/245936898-76f35f55-ef28-4cfa-badf-165929ceb5af.png">
 ---
 
