@@ -14,7 +14,7 @@ Automated E2E and integration testing of Milo-based projects.
 - Scenario B : I / We want use existing Nala repo, learn and explore Nala test automation 
   - step-1 : Fork [Nala-Template](https://github.com/adobecom/nala-template) repository
   - step-2 : Clone, and and set the remote URLs (Upstream and Origin)
-### 2. Nala Dry run
+### 2. Nala Dry run test
 - Run following command in VSCode terminal
 ```bash
 npx playwright test -g@quote
