@@ -26,7 +26,7 @@ npx playwright test -g@quote
 ```
 ### 3. Start Nala automation test script creation
 Nala test automation script creation involves following 3 simple steps.
-- Step-1 : Create [`feature.spec.js`]('https://github.com/adobecom/nala-template/tree/main/features') under Features folder and add test cases and data
+- Step-1 : Create [feature.spec.js]('https://github.com/adobecom/nala-template/tree/main/features') under Features folder and add test cases and data
 - Please refer sample template for creating test cases
 ```bash
 module.exports = {
@@ -48,7 +48,7 @@ module.exports = {
 image.png
 
 ```
-- Step-2 : Create [`selector.page.js`]('https://github.com/adobecom/nala-template/tree/main/selectors') under Selector folder and add selectors
+- Step-2 : Create [selector.page.js]('https://github.com/adobecom/nala-template/tree/main/selectors') under Selector folder and add selectors
 - Please refer sample template for creating selector page object
 ```bash
 export default class Quote {
@@ -65,7 +65,7 @@ export default class Quote {
 }
 
 ```
-- Step-3 : Create [`<block_name>.test.js`]('https://github.com/adobecom/nala-template/blob/main/tests/quote.block.test.js') under Tests folder, and add tests
+- Step-3 : Create [<block_name>.test.js]('https://github.com/adobecom/nala-template/blob/main/tests/quote.block.test.js') under Tests folder, and add tests
 - Please refer [sample template]() for creating tests
 ```bash
 // Quote block tests
@@ -179,9 +179,9 @@ npx playwright test -g=@quote --project=milo-live-chrome --headed
 ```
 #### 4.4 : Run Tests on my localhost (ex: @local3000': 'http://localhost:3000',) 
 ##### To run Nala tests on your local host, please make sure you have following configs set
-  - Add your local host url parameter in[`.env.js`]('https://github.com/adobecom/nala-template/blob/main/envs/envs.js')
+  - Add your local host url parameter in[.env.js]('https://github.com/adobecom/nala-template/blob/main/envs/envs.js')
     - `'@local3000': 'http://localhost:3000',`
-  - Please add a local project and local baseURL in [`playwright.config.js`]('https://github.com/adobecom/nala/blob/main/playwright.config.js')
+  - Please add a local project and local baseURL in [playwright.config.js]('https://github.com/adobecom/nala/blob/main/playwright.config.js')
     ```bash
         {
       name: 'local-chrome',
@@ -231,9 +231,8 @@ Example-4 : As part of this PR i want to verify smokes tests on Milo and Bcom ap
   PR Label = @smoke @run-on-milo @run-on-bcom
 ```
 ##### All nala tests are schedule to run daily at 9:30 am PST 
-  - Please refer [`daily.yml`]('https://github.com/adobecom/nala/blob/main/.github/workflows/daily.yml') for daily run workflow 
+  - Please refer [daily.yml]('https://github.com/adobecom/nala/blob/main/.github/workflows/daily.yml') for daily run workflow 
   - Tests are run on following platerforms
     - Linux OS ( ubuntu-latests) with browsers = [Chrome, Firefox, and WebKit]
     - Windows OS ( windows-latests) with browsers = [Chrome, Firefox, and WebKit]
     - Mac OS ( macos-latests) with browsers = [Chrome, Firefox, and WebKit]
-
