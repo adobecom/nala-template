@@ -19,14 +19,14 @@ Automated E2E and integration testing of Milo-based projects.
 ```bash
 npx playwright test -g@quote
 ```
-- if any errors then run following commands to install dependencies defined in the [`package.json`]('https://github.com/adobecom/nala-template/blob/main/package.json') and then run above command
+- if any errors then run following commands to install dependencies defined in the [`package.json`](https://github.com/adobecom/nala-template/blob/main/package.json) and then run above command
 ```bash
  - npm install
  - npm fund 
 ```
 ### 3. Start Nala automation test script creation
 Nala test automation script creation involves following 3 simple steps.
-- Step-1 : Create [feature.spec.js]('https://github.com/adobecom/nala-template/tree/main/features') under Features folder and add test cases and data
+- Step-1 : Create [feature.spec.js](https://github.com/adobecom/nala-template/tree/main/features) under Features folder and add test cases and data
 - Please refer sample template for creating test cases
 ```bash
 module.exports = {
