@@ -40,24 +40,24 @@ const config = {
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
-    baseURL: process.env.BASE_URL || envs['@milo_live'] || 'https://main--milo--adobecom.hlx.page',
+    baseURL: process.env.BASE_URL || envs['@milo_live'] || 'https://main--milo--adobecom.hlx.live',
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'milo-live-chrome',
+      name: 'local-live-chrome',
       use: {
         ...devices['Desktop Chrome'],
-        baseURL: envs['@milo-live'],
+        baseURL: envs['@local3000'],
       },
     },
 
     {
-      name: 'milo-live-firefox',
+      name: 'local-live-firefox',
       use: {
         ...devices['Desktop Firefox'],
-        baseURL: envs['@milo-live'],
+        baseURL: envs['@local3000'],
       },
     },
 
@@ -68,30 +68,16 @@ const config = {
         baseURL: envs['@milo-live'],
       },
     },
-
+    /**
+     * example for adding consuming applications
     {
-      name: 'milo-prod-chrome',
+      name: 'bacome-live-chrome',
       use: {
         ...devices['Desktop Chrome'],
-        baseURL: envs['@milo_prod'],
+        baseURL: envs['@bacom_live'],
       },
     },
-
-    {
-      name: 'milo-prod-firefox',
-      use: {
-        ...devices['Desktop Firefox'],
-        baseURL: envs['@milo_prod'],
-      },
-    },
-
-    {
-      name: 'milo-prod-webkit',
-      use: {
-        ...devices['Desktop Safari'],
-        baseURL: envs['@milo_prod'],
-      },
-    },
+     */
   ],
 };
 export default config;
