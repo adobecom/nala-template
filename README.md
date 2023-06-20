@@ -131,27 +131,16 @@ npx playwright test --headed
 ```bash
 npx playwright test --project=milo-live-chrome
 ```
-  - Example-4 : I want to run all tests on specific environments or projects (i.e [milo-prod](https://milo.adobe.com)) on chrome browser in GUI mode
-```bash
-npx playwright test --project=milo-live-chrome --headed
-```
+  - Note : To run tests in GUI mode , you append `--headed` to run commands
 
 #### 4.2 : Run Test Suite 
   - Example-1 : I want to run Quote block test suite on all environment or projects on all browsers in headless mode
 ```bash
-npx playwright quote.block.test
+npx playwright test quote.block.test
 ```
-  - Example-2 : I want to run Quote block test suite on all environment or projects on all browsers in GUI mode
+  - Example-2 : I want to run Quote block test suite on specific environment or projects (i.e [milo-live](https://main--milo--adobecom.hlx.live)) on firefox browsers in headless mode
 ```bash
-npx playwright quote.block.test --headed
-```
-  - Example-3 : I want to run Quote block test suite on specific environment or projects (i.e [milo-live](https://main--milo--adobecom.hlx.live)) on firefox browsers in headless mode
-```bash
-npx playwright quote.block.test --project=milo-live-firefox
-```
-  - Example-4 : I want to run Quote block test suite on specific environment or projects (i.e [milo-prod](https://milo.adobe.com)) on firefox browsers GUI mode
-```bash
-npx playwright quote.block.test --project=milo-prod-firefox --headed
+npx playwright test quote.block.test --project=milo-live-firefox
 ```
 #### 4.3 : Run Tests using Tags (@) 
   ##### Example-1: I want to run all milo tests on all environment or projects on all browsers in headless mode
@@ -179,10 +168,6 @@ npx playwright test -g=@quote|@marquee
 ```bash
 npx playwright test -g=@quote|@marquee|@accordion --project=milo-live-chrome
 ```
-  - Example-5: I want to run quote block tests on (i.e [milo-live](https://main--milo--adobecom.hlx.live)) envronment on chrome browser in GUI mode
-```bash
-npx playwright test -g=@quote --project=milo-live-chrome --headed
-```
 #### 4.4 : Run Tests on my localhost (ex: @local3000': 'http://localhost:3000',) 
 ##### To run Nala tests on your local host, please make sure you have following configs set
   - Add your local host url parameter in[`.env.js`](https://github.com/adobecom/nala-template/blob/main/envs/envs.js)
@@ -209,15 +194,11 @@ npx playwright test -g=@quote --project=milo-live-chrome --headed
 ```bash
 npx playwright test --project=local-chrome
 ```
-  - Example-2 : I want to run all tests on my local environments or projects (i.e [local-chrome]('http://localhost:3000')) on chrome browser in GUI mode
-```bash
-npx playwright test --project=local-chrome --headed
-```
   - Example-3: I want to run all smoke test suite on my local all environment or projects on chrome browser in headless mode
 ```bash
 npx playwright test -g=@smoke --project=local-chrome
 ```
-Note: Please refer other options of section-4, for various run methods  
+  - Note: Please refer other options of section-4, for various run methods  
 
 
 #### 4.4 : Run Tests on GitHub using using GitHub actions.
