@@ -76,7 +76,6 @@ test.describe('Milo Quote block test suite', () => {
   // before each test block
   test.beforeEach(async ({ page }) => {
     obj = new Quote(page);
-    webutil = new WebUtil(page);
   });
 
   // Test - 0
@@ -98,12 +97,6 @@ test.describe('Milo Quote block test suite', () => {
       await expect(await obj.quote).toBeVisible();
       await expect(await obj.quoteCopy).toContainText(data.quoteCopy);
       await expect(await obj.quoteFigCaption).toContainText(data.figCaption);
-
-      // verify quote block css
-      expect(await webutil.verifyCSS(
-        await obj.quote,
-        obj.cssProperties.quote,
-      )).toBeTruthy();
     });
   });
 });
