@@ -40,32 +40,32 @@ const config = {
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
-    baseURL: process.env.BASE_URL || envs['@milo_live'] || 'https://main--milo--adobecom.hlx.live',
+    // baseURL: process.env.BASE_URL || envs['@milo_live'] || 'https://main--milo--adobecom.hlx.live',
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'local-live-chrome',
+      name: 'local-chrome',
       use: {
         ...devices['Desktop Chrome'],
-        baseURL: envs['@local3000'],
+        baseURL: envs['@local-live'],
       },
     },
 
     {
-      name: 'local-live-firefox',
+      name: 'local-firefox',
       use: {
         ...devices['Desktop Firefox'],
-        baseURL: envs['@local3000'],
+        baseURL: envs['@local-live'],
       },
     },
 
     {
-      name: 'milo-live-webkit',
+      name: 'local-webkit',
       use: {
         ...devices['Desktop Safari'],
-        baseURL: envs['@milo-live'],
+        baseURL: envs['@local-live'],
       },
     },
     /**

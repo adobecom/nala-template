@@ -15,4 +15,5 @@ module.exports = {
   '@blog_live': 'https://main--blog--adobe.hlx.live',
   '@local3000': 'http://localhost:3000',
   '@local6456': 'http://localhost:6456',
+  '@mybranch': 'https://main--my-college--skumar09.hlx.live',
 };
