@@ -224,6 +224,3 @@ Example-4 : As part of this PR i want to verify smokes tests on Milo and Bcom ap
     - Windows OS ( windows-latests) with browsers = [Chrome, Firefox, and WebKit]
     - Mac OS ( macos-latests) with browsers = [Chrome, Firefox, and WebKit]
 
-
-
-### End
