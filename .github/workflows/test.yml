@@ -1,0 +1,38 @@
+name: Running tests
+
+on:
+  workflow_dispatch:  # Add this event to enable manual triggering
+
+jobs:
+  action:
+    name: Running tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - name: Run Regression
+        uses: ./
+        env:
+          IMS_EMAIL: ${{ secrets.IMS_EMAIL }}
+          IMS_PASS: ${{ secrets.IMS_PASS }}
+      - name: Save Results
+        run: |
+          # Construct the filename using repository name, branch name, and current timestamp
+          reponame=${{ github.repository_owner }}
+          branchname=${{ github.ref_slug }}
+          timestamp=$(date '+%Y%m%d_%H%M%S')
+          filename="test-results_${reponame}${branchname}_run_${timestamp}.json"
+          
+          # Rename the original test-results.json to the constructed filename
+          mv test-results.json $filename
+          
+          # Display the constructed filename
+          echo "Generated Filename: $filename"
+      - name: Persist JSON Artifact
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: test-results
+          path: test-results_*.json
+          retention-days: 30
