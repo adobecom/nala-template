@@ -38,4 +38,4 @@ jobs:
           mv nala-results.json $filename
           #Display the constructed filename
           echo "Generated Filename: $filename"
-          shell: bash
+        shell: bash
