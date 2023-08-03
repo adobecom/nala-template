@@ -32,9 +32,8 @@ jobs:
         run: |
 
           reponame: ${{ github.repository_owner }}
-          branchname: ${{ github.head_ref }}
           timestamp: $(date '+%Y%m%d_%H%M%S')
-          filename: "test-results_${reponame}${branchname}_run_${timestamp}.json"
-          uses: mv test-results.json $filename
+          filename: "test-results_${reponame}${branchname}_run.json"
+          uses: mv nala-results.json $filename
           #Display the constructed filename
           echo "Generated Filename: $filename"
