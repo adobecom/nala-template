@@ -32,7 +32,7 @@ jobs:
         run: |
 
           reponame: ${{ github.repository_owner }}
-          branchname: ${{ github.ref_slug }}
+          branchname: ${{ github.head_ref }}
           timestamp: $(date '+%Y%m%d_%H%M%S')
           filename: "test-results_${reponame}${branchname}_run_${timestamp}.json"
           uses: mv test-results.json $filename
