@@ -27,11 +27,12 @@ jobs:
           IMS_EMAIL: ${{ secrets.IMS_EMAIL }}
           IMS_PASS: ${{ secrets.IMS_PASS }}
       - name: Save Results
-        run:
+        run: |
+
           reponame: ${{ github.repository_owner }}
           branchname: ${{ github.ref_slug }}
           timestamp: $(date '+%Y%m%d_%H%M%S')
           filename: "test-results_${reponame}${branchname}_run_${timestamp}.json"
           uses: mv test-results.json $filename
-          # Display the constructed filename
+          #Display the constructed filename
           echo "Generated Filename: $filename"
