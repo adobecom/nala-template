@@ -17,7 +17,7 @@ jobs:
           IMS_EMAIL: ${{ secrets.IMS_EMAIL }}
           IMS_PASS: ${{ secrets.IMS_PASS }}
       - name: Save Results
-        run: |
+        run:
           # Construct the filename using repository name, branch name, and current timestamp
           reponame=${{ github.repository_owner }}
           branchname=${{ github.ref_slug }}
