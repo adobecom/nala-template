@@ -28,10 +28,10 @@ jobs:
           IMS_PASS: ${{ secrets.IMS_PASS }}
       - name: Save Results
         run:
-          reponame=${{ github.repository_owner }}
-          branchname=${{ github.ref_slug }}
-          timestamp=$(date '+%Y%m%d_%H%M%S')
-          filename="test-results_${reponame}${branchname}_run_${timestamp}.json"
+          reponame: ${{ github.repository_owner }}
+          branchname: ${{ github.ref_slug }}
+          timestamp: $(date '+%Y%m%d_%H%M%S')
+          filename: "test-results_${reponame}${branchname}_run_${timestamp}.json"
           
           # Rename the original test-results.json to the constructed filename
           mv test-results.json $filename
