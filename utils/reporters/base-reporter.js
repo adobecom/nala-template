@@ -97,7 +97,6 @@ class BaseReporter {
       repo,
       results: this.results,
       timestamp: currTime,
-      path,
     };
   }
 }
