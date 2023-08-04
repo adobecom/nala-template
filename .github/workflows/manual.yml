@@ -39,10 +39,11 @@ jobs:
           #Display the constructed filename
           echo "Generated Filename: $filename"
           cat "$filename"
+          file_contents=$(cat "$file_path")
           echo "File Path of nala-results.json: $PWD/nala-results.json"
           path="$PWD/nala-results.json"
           echo "Path : ${path}"
           curl -X POST 'https://14257-naladashboard-stage.adobeio-static.net/api/v1/web/nala-reporting/post-results' \
             -H "Content-Type: application/json" \
-            -d "{\"path\": \"${path}\"}"
+            -d "{\"path\": \"${file_contents}\"}"
         shell: bash
