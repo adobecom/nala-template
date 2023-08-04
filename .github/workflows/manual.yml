@@ -39,7 +39,7 @@ jobs:
           #Display the constructed filename
           echo "Generated Filename: $filename"
           cat "$filename"
-          file_contents=$(cat "$file_path")
+          file_contents=$(cat "$filename")
           echo "File Path of nala-results.json: $PWD/nala-results.json"
           path="$PWD/nala-results.json"
           echo "Path : ${path}"
