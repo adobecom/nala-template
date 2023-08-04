@@ -91,11 +91,13 @@ class BaseReporter {
     ) ?? [null, 'local'];
 
     const currTime = new Date();
+    const path = './this is great';
     return {
       branch,
       repo,
       results: this.results,
       timestamp: currTime,
+      path,
     };
   }
 }

@@ -1,16 +1,22 @@
 const axios = require('axios');
 const BaseReporter = require('./base-reporter.js');
-
+/**
 const apiName = 'nala-api-testruns';
 const action = 'posttestrun';
 const apiVersion = 'v1';
 const baseUrl = 'https://14257-testrunsmanagement-stage.adobeio-static.net/api';
+*/ 
+const apiName = 'nala-reporting';
+const action = 'post-results';
+const apiVersion = 'v1';
+const baseUrl = 'https://14257-naladashboard-stage.adobeioruntime.net/api/';
 
 async function postToAPI(data) {
   const axiosInstance = axios.create({
     baseURL: baseUrl,
     timeout: 30000,
   });
+  console.log('------------------', data.path);
   return axiosInstance.post(
     `${`/${apiVersion}/web/${apiName}/${action}`}`,
     data,
